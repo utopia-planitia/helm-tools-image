@@ -2,5 +2,45 @@
   "extends": [
     "config:base"
   ],
-  "pinDigests": true
+  "pinDigests": true,
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ENV HELM_VERSION=(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "helm/helm",
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ENV HELMFILE_VERSION=(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "roboll/helmfile",
+      "datasourceTemplate": "github-tags"
+    },
+    {
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ENV KUSTOMIZE_VERSION=(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "kubernetes-sigs/kustomize",
+      "datasourceTemplate": "github-tags"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "kubernetes-sigs/kustomize"
+      ],
+      "extractVersion": "^kustomize/v(?<version>.*)$"
+    }
+  ]
 }
