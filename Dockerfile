@@ -8,14 +8,14 @@ RUN apt install -y curl
 
 # helm
 # renovate: datasource=github-tags depName=helm/helm
-ENV HELM_VERSION=3.5.3
+ENV HELM_VERSION=v3.5.3
 RUN curl -fsSL -o /usr/local/bin/get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && \
     chmod +x /usr/local/bin/get_helm.sh && \
-    DESIRED_VERSION=v${HELM_VERSION} get_helm.sh
+    DESIRED_VERSION=${HELM_VERSION} get_helm.sh
 
 # helmfile
-ENV HELMFILE_VERSION=0.138.7
-RUN curl -fsSL -o /usr/local/bin/helmfile https://github.com/roboll/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 && \
+ENV HELMFILE_VERSION=v0.138.7
+RUN curl -fsSL -o /usr/local/bin/helmfile https://github.com/roboll/helmfile/releases/download/${HELMFILE_VERSION}/helmfile_linux_amd64 && \
     chmod +x /usr/local/bin/helmfile
 
 # kustomize
