@@ -7,7 +7,6 @@ RUN apt upgrade -y
 RUN apt install -y curl
 
 # helm
-# renovate: datasource=github-tags depName=helm/helm
 ENV HELM_VERSION=v3.5.3
 RUN curl -fsSL -o /usr/local/bin/get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && \
     chmod +x /usr/local/bin/get_helm.sh && \
