@@ -3,6 +3,10 @@
     "config:base"
   ],
   "pinDigests": true,
+  "enabledManagers": [
+    "dockerfile",
+    "regex"
+  ],
   "regexManagers": [
     {
       "fileMatch": [
