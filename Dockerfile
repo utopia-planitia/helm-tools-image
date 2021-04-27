@@ -1,4 +1,4 @@
-FROM golang:1.16.3-buster AS helmfile
+FROM golang:1.16.3-buster@sha256:9d64369fd3c633df71d7465d67d43f63bb31192193e671742fa1c26ebc3a6210 AS helmfile
 
 RUN go get github.com/roboll/helmfile@204f78c8ff6831bc3320fa23fc319cfbe7895b5a
 
