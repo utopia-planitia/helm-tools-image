@@ -1,7 +1,3 @@
-FROM golang:1.16.4-buster@sha256:cdc0ce37b610ff73209377bf3a8ba9b3710bf853876863d4b3b6c1f778edade5 AS helmfile
-
-RUN go get github.com/roboll/helmfile@204f78c8ff6831bc3320fa23fc319cfbe7895b5a
-
 FROM ubuntu:20.04@sha256:cf31af331f38d1d7158470e095b132acd126a7180a54f263d386da88eb681d93
 
 RUN apt update
@@ -20,8 +16,6 @@ RUN curl -fsSL -o /usr/local/bin/get_helm.sh https://raw.githubusercontent.com/h
 ENV HELMFILE_VERSION=v0.139.0
 RUN curl -fsSL -o /usr/local/bin/helmfile https://github.com/roboll/helmfile/releases/download/${HELMFILE_VERSION}/helmfile_linux_amd64 && \
     chmod +x /usr/local/bin/helmfile
-
-COPY --from=helmfile /go/bin/helmfile /usr/local/bin/helmfile
 
 # kustomize
 ENV KUSTOMIZE_VERSION=4.1.2
