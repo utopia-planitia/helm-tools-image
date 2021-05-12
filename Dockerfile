@@ -3,8 +3,8 @@ FROM ubuntu:20.04@sha256:cf31af331f38d1d7158470e095b132acd126a7180a54f263d386da8
 RUN apt update
 RUN apt upgrade -y
 
-# curl
-RUN apt install -y curl
+# curl git
+RUN apt install -y curl git
 
 # helm
 ENV HELM_VERSION=v3.5.4
