@@ -13,7 +13,7 @@ RUN curl -fsSL -o /usr/local/bin/get_helm.sh https://raw.githubusercontent.com/h
     DESIRED_VERSION=${HELM_VERSION} get_helm.sh
 
 # helmfile
-ENV HELMFILE_VERSION=v0.139.9
+ENV HELMFILE_VERSION=v0.140.0
 RUN curl -fsSL -o /usr/local/bin/helmfile https://github.com/roboll/helmfile/releases/download/${HELMFILE_VERSION}/helmfile_linux_amd64 && \
     chmod +x /usr/local/bin/helmfile
 
