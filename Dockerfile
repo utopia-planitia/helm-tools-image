@@ -1,4 +1,4 @@
-FROM ubuntu:20.04@sha256:b3e2e47d016c08b3396b5ebe06ab0b711c34e7f37b98c9d37abe794b71cea0a2
+FROM ubuntu:20.04@sha256:0025e7e0c4ff0348e0d85fa18573a22dc79315e3f8f3015db163d59a68471291
 
 RUN apt update
 RUN apt upgrade -y
