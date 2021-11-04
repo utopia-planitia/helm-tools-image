@@ -4,6 +4,12 @@
     "config:base"
   ],
   "pinDigests": true,
+  "prHourlyLimit": 0,
+  "labels": [
+      "renovate-bot"
+  ],
+  "automerge": true,
+  "automergeType": "pr",
   "regexManagers": [
     {
       "fileMatch": [
@@ -43,14 +49,5 @@
       ],
       "extractVersion": "^kustomize/v(?<version>.*)$"
     }
-  ],
-  "prHourlyLimit": 0,
-  "labels": [
-    "renovate-bot"
-  ],
-  "automerge": true,
-  "automergeType": "pr",
-  "prConcurrentLimit": 3,
-  "dependencyDashboard": true,
-  "dependencyDashboardAutoclose": true
+  ]
 }
