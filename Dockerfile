@@ -1,4 +1,4 @@
-FROM ubuntu:22.04@sha256:f4eb4e8abfdf2ea5b5961cac32b8a49539bd0da84e52fa359bf64ee3035a5ce9
+FROM ubuntu:22.04@sha256:f154feaf13b51d16e2b4b5575d69abc808da40c4b80e3a5055aaa4bcc5099d5b
 
 RUN apt update
 RUN apt upgrade -y
