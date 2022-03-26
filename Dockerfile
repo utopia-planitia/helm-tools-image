@@ -18,7 +18,7 @@ RUN curl -fsSL -o /usr/local/bin/helmfile https://github.com/roboll/helmfile/rel
     chmod +x /usr/local/bin/helmfile
 
 # kustomize
-ENV KUSTOMIZE_VERSION=4.4.1
+ENV KUSTOMIZE_VERSION=4.5.3
 RUN curl -fsSL -o /usr/local/bin/install_kustomize.sh https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh && \
     chmod +x /usr/local/bin/install_kustomize.sh && \
     install_kustomize.sh ${KUSTOMIZE_VERSION} /usr/local/bin/
