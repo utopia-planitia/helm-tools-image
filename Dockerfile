@@ -7,7 +7,7 @@ RUN apt upgrade -y
 RUN apt install -y curl git
 
 # helm
-ENV HELM_VERSION=v3.15.4
+ENV HELM_VERSION=v3.16.0
 RUN curl -fsSL -o /usr/local/bin/get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && \
     chmod +x /usr/local/bin/get_helm.sh && \
     DESIRED_VERSION=${HELM_VERSION} get_helm.sh
